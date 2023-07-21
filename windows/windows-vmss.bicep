@@ -1,4 +1,4 @@
-param adminPassword string = '235-dsbluebla'
+param adminPassword string
 param prefix string = 'vmmetadata'
 var bePoolName = '${prefix}Bepool'
 var loadBalancerName = '${prefix}VmssLB'
@@ -8,8 +8,6 @@ var vmssLBPublicIPName = '${prefix}vmssLBPublicIP'
 var lbPoolID = resourceId('Microsoft.Network/loadBalancers/backendAddressPools', loadBalancerName, bePoolName)
 var frontEndIPConfigID = resourceId('Microsoft.Network/loadBalancers/frontendIPConfigurations', loadBalancerName, 'loadBalancerFrontEnd')
 var nsgGroupID = resourceId('Microsoft.Network/networkSecurityGroups', nsgName)
-
-@description('The location where the resource is created.')
 param location string = resourceGroup().location
 
 resource vmssVNET 'Microsoft.Network/virtualNetworks@2015-06-15' = {

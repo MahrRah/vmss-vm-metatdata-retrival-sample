@@ -1,4 +1,4 @@
-param adminPassword string ='235-dsbluebla'
+param adminPassword string 
 param prefix string = 'vmmetadata'
 var bePoolName = '${prefix}Bepool'
 var loadBalancerName = '${prefix}VmssLB'
