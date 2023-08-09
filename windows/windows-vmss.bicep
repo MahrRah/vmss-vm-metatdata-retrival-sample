@@ -134,7 +134,7 @@ resource vmss 'Microsoft.Compute/virtualMachineScaleSets@2022-03-01' = {
               typeHandlerVersion: '1.10'
               settings: {
                 commandToExecute: 'powershell -ExecutionPolicy Unrestricted -File vm-metadata.ps1'
-                fileUris: [ 'https://gist.githubusercontent.com/MahrRah/4d97d6cdfebafe6c5c39e8fb64b14eb2/raw/9b1f986a5dc64ca5e8481ce2e83084d13efcfff9/vm-metadata.ps1' ]
+                fileUris: [ 'https://raw.githubusercontent.com/MahrRah/vmss-vm-metatdata-retrival-sample/main/windows/vm-metadata.ps1' ]
               }
             }
           } ]
